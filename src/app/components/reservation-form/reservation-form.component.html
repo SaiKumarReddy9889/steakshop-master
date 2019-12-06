@@ -1,0 +1,77 @@
+<div>
+  <div class="img">
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+      <div fxFlexOffset="55"></div>
+
+      <div fxFlex="25">
+        <div class="card">
+          <h1>Reservation Form</h1>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Name" />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input
+                matInput
+                placeholder="Email"
+                [formControl]="emailFormControl"
+                [errorStateMatcher]="matcher"
+              />
+              <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+              <mat-error
+                *ngIf="
+                  emailFormControl &&
+                  emailFormControl.hasError('email') &&
+                  !emailFormControl.hasError('required')
+                "
+              >
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Phone Number" />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Number Of People</mat-label>
+              <mat-select>
+                <mat-option
+                  *ngFor="let people of peoples"
+                  [value]="people.value"
+                >
+                  {{ people.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input
+                matInput
+                [matDatepicker]="picker"
+                placeholder="Choose a date"
+              />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Select Event</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let event of events" [value]="event.value">
+                  {{ event.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div align="center">
+              <button>MAKE RESERVATION</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div fxFlexOffset="20"></div>
+    </div>
+  </div>
+</div>

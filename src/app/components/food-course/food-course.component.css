@@ -1,0 +1,41 @@
+img {
+  vertical-align: middle;
+  margin-top: 15%;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 50px;
+}
+p {
+  margin-bottom: 1rem;
+  line-height: 30px;
+}
+button {
+  display: inline-block;
+  padding: 0px 30px;
+  color: #222222;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 50px;
+  border: 1px solid #f42f2c;
+  border-radius: 2px;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+}
+button:hover {
+  background: #f42f2c;
+  color: #ffffff;
+}
+.img1 {
+  position: relative;
+  top: 0px;
+}
+.img2 {
+  position: absolute;
+  bottom: 1px;
+  right: 15%;
+}

@@ -1,0 +1,35 @@
+img {
+  vertical-align: middle;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 50px;
+}
+p {
+  margin-bottom: 1rem;
+  line-height: 30px;
+}
+.img3 {
+  position: relative;
+  top: 0px;
+  margin-top: 15%;
+}
+.img4 {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+}
+.margin {
+  margin-top: 10px;
+}
+.margin p {
+  font-size: 12px;
+  line-height: 28px;
+}
+.margin h4 {
+  margin-top: 18px;
+}
+.img {
+  vertical-align: middle;
+}
