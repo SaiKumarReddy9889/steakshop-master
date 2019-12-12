@@ -11,7 +11,7 @@ import { SliderItemDirective } from "./slider-item.directive";
 @Component({
   selector: "app-slider",
   templateUrl: "./slider.component.html",
-  styleUrls: ["./slider.component.scss"]
+  styleUrls: ["./slider.component.css"]
 })
 export class SliderComponent implements AfterContentInit {
   @ContentChildren(SliderItemDirective, { read: ElementRef }) items: QueryList<

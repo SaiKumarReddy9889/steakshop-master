@@ -15,6 +15,8 @@ import { DailyFoodCoursesComponent } from "./components/daily-food-courses/daily
 import { SliderComponent } from "./components/slider/slider.component";
 import { CarouselComponent } from "./components/carousel/carousel.component";
 import { SliderItemDirective } from "./components/slider/slider-item.directive";
+import { AssociasionComponent } from './components/associasion/associasion.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { SliderItemDirective } from "./components/slider/slider-item.directive";
     DailyFoodCoursesComponent,
     SliderComponent,
     CarouselComponent,
-    SliderItemDirective
+    SliderItemDirective,
+    AssociasionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
