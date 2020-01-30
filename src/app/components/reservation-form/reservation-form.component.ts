@@ -48,7 +48,20 @@ export class ReservationFormComponent implements OnInit {
   ]);
   // nameFormControl = new FormControl("", [Validators.required, Validators.name]);
   matcher = new MyErrorStateMatcher();
+  trigger: boolean = true;
+
+  heroes = ["Windstorm", "Bombasto", "Magneta", "Tornado"];
+  addHero(oldHero: string) {
+    if (oldHero) {
+      this.heroes.push(oldHero);
+    }
+  }
   constructor() {}
 
   ngOnInit() {}
+
+  onClick() {
+    this.trigger = !this.trigger;
+    console.log(this.trigger);
+  }
 }

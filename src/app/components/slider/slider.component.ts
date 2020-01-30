@@ -7,6 +7,7 @@ import {
   ElementRef
 } from "@angular/core";
 import { SliderItemDirective } from "./slider-item.directive";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-slider",
@@ -47,5 +48,8 @@ export class SliderComponent implements AfterContentInit {
     if (this.slidesIndex < this.items.length - 1) {
       this.slidesIndex++;
     }
+  }
+  onSubmit(form: NgForm) {
+    console.log("Value of a name variable is: " + form.value.name);
   }
 }

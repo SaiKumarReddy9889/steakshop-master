@@ -1,4 +1,4 @@
-<app-banner></app-banner>
+<!-- <app-banner></app-banner>
 <app-food-course></app-food-course>
 <app-drinks></app-drinks>
 <app-reservation-form></app-reservation-form>
@@ -6,3 +6,12 @@
 <app-carousel></app-carousel>
 <app-associasion></app-associasion>
 <app-footer></app-footer>
+<app-diamond></app-diamond> -->
+<!-- <h2 style="text-align: center;">{{ message }}</h2> -->
+<h1>{{ message }}</h1>
+<img src="{{ message }}" alt="" />
+
+<app-diamond (childEvent)="message = $event" [imchild]="imparent"></app-diamond>
+<div>
+  <h1>Parent Title</h1>
+</div>

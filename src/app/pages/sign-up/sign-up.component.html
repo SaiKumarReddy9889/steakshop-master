@@ -1,0 +1,101 @@
+<div Align="center">
+  <div class="card">
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+      <div fxFlex="50" fxHide.sm fxHide.xs>
+        <img src="../../../assets/img/login.jpg" />
+      </div>
+      <div fxFlex="50" fxFlex.sm="90" fxFlex.xs="90">
+        <h2>{{ title }}</h2>
+        <form
+          [formGroup]="signupForm"
+          (ngSubmit)="onSubmit(signupForm.value)"
+          class="form"
+        >
+          <div fxLayout="row wrap" fxLayoutAlign="center center">
+            <mat-form-field class="form-element">
+              <input
+                matInput
+                placeholder="Name"
+                formControlName="name"
+                [(ngModel)]="profile.name"
+              />
+              <mat-error *ngIf="!name.valid && name.touched">
+                {{ titleAlert }}
+              </mat-error>
+            </mat-form-field>
+
+            <div fxFlex="100">
+              <mat-form-field class="form-element">
+                <input
+                  matInput
+                  placeholder="Emailaddress"
+                  formControlName="email"
+                  [(ngModel)]="profile.email"
+                />
+                <mat-error
+                  *ngIf="
+                    !signupForm.controls['email'].valid &&
+                    signupForm.controls['email'].touched
+                  "
+                >
+                  {{ getErrorEmail }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div fxFlex="100">
+              <mat-form-field class="form-element">
+                <input
+                  matInput
+                  placeholder="Mobile"
+                  formControlName="mobile"
+                  [(ngModel)]="profile.mobile"
+                />
+                <mat-error
+                  *ngIf="
+                    !signupForm.controls['mobile'].valid &&
+                    signupForm.controls['mobile'].touched
+                  "
+                >
+                  {{ getErrorMobile }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div fxFlex="100">
+              <mat-form-field class="form-element">
+                <input
+                  matInput
+                  placeholder="Password"
+                  formControlName="password"
+                  [(ngModel)]="profile.password"
+                />
+                <mat-error
+                  *ngIf="
+                    !signupForm.controls['password'].valid &&
+                    signupForm.controls['password'].touched
+                  "
+                >
+                  {{ getErrorPassword }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div fxFlex="100">
+              <div class="form-element">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  type="submit"
+                  class="button"
+                  [disabled]="!signupForm.valid"
+                >
+                  Submit Form
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <pre> {{ signupForm.value | json }}</pre> -->
+<!-- <pre> {{ profile.name }}</pre> -->

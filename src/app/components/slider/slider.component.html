@@ -13,3 +13,12 @@
     </div>
   </div>
 </div>
+
+<div>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label for="name">Pizza Name</label>
+    <input type="text" class="form-control" id="name" name="name" ngModel />
+
+    <button class="btn btn-primary" type="submit">Order Now</button>
+  </form>
+</div>
